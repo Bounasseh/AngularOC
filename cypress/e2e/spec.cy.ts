@@ -1,6 +1,6 @@
 describe('My First Test', () => {
   it('Visits the initial project page', () => {
-    cy.visit('https://www.cypress.io/');
-    cy.contains('With Cypress,');
+    cy.visit('http://localhost:4200/');
+    cy.contains('ONE PIECE !');
   })
 })
