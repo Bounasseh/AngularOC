@@ -15,5 +15,4 @@
 
 // When a command from ./commands is ready to use, import with `import './commands'` syntax
 import './commands';
-// import 'cypress-mochawesome-reporter/register';
-import '@shelex/cypress-allure-plugin';
+import 'cypress-mochawesome-reporter/register';

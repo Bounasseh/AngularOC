@@ -1,14 +1,8 @@
 import { defineConfig } from 'cypress'
 
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
-
 export default defineConfig({
 
-  // reporter: 'cypress-mochawesome-reporter',
-
-  env: {
-    allure: true
-  },
+  reporter: 'cypress-mochawesome-reporter',
 
   e2e: {
     viewportWidth: 1366,
@@ -16,9 +10,7 @@ export default defineConfig({
     experimentalStudio: true,
     video: true,
     setupNodeEvents(on, config) {
-      // require('cypress-mochawesome-reporter/plugin')(on);
-      allureWriter(on, config);
-      // return config;
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 
